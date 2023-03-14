@@ -186,6 +186,10 @@ html {
     overflow-x: hidden;
 }
 
+.text-white {
+    color: white;
+}
+
 @media screen and (max-width: 1200px) {
     .row {
         flex-direction: column;
@@ -250,5 +254,18 @@ html {
         transform: scale(1.5);
         margin-top: 45px;
         margin-bottom: 45px;
+    }
+
+    th {
+        background-color: #eeebeb;
+        padding: 5px;
+        font-weight: 700;
+        font-size: 15px;
+        color: black;
+    }
+
+    td * {
+        color: black;
+        font-size: 14px;
     }
 }

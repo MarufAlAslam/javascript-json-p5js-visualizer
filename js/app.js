@@ -20,7 +20,7 @@ const createTableRows = (data) => {
     data.features.map((eq) => {
         tableRows += `<tr>
             <td>
-                <a href="overview.html#${eq.id}" target="_blank">${eq.properties.place}</a>
+                <a href="overview.html#${eq.id}">${eq.properties.place}</a>
             </td>
             <td>${eq.properties.sig}</td>
         </tr>`;
