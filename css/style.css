@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+body,
+html {
+    background-color: #5F5A5A;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.va-middle {
+    vertical-align: middle;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pt-5 {
+    padding-top: 3rem;
+}
+
+.pb-5 {
+    padding-bottom: 3rem;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* bootstrap stripped table */
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+tr:nth-child(even) td {
+    color: black;
+    background-color: #c9c8c8;
+}
+
+tr:nth-child(odd) td {
+    color: black;
+    background-color: #b5b2b2;
+}
+
+th {
+    background-color: #eeebeb;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
+}
+
+td {
+    padding: 10px;
+}
+
+td * {
+    color: black;
+    font-size: 18px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.card {
+    background-color: #eeebeb;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+.card-body {
+    padding: 40px;
+    width: 100%;
+}
+
+/* overview */
+.subtitle {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: black;
+}
