@@ -1,16 +1,17 @@
 // get the id part from url
 const id = window.location.hash.slice(1);
-const placeName = document.getElementById('place-name');
 const chart = document.getElementById('chart');
 const defaultCanvas = document.getElementById('defaultCanvas0');
 const loader = document.getElementById('loader');
 const placeInfo = document.getElementById('place-info');
+const chartInfo = document.getElementById('chart-info');
+const colors = document.getElementById('colors');
 
 
 var dataArray = [];
 
 
-placeName.innerHTML = id;
+// placeName.innerHTML = id;
 
 // get the api data from online json, filter using id and get the data
 const getData = async () => {
@@ -22,6 +23,40 @@ const getData = async () => {
     dataUpdater(total, eq[0].properties.sig, eq[0].properties.nst, eq[0].properties.gap);
     // console.log(eq);
     createChart(eq);
+
+
+    placeInfo.innerHTML = `
+        <h3 class="subtitle">${eq[0].properties.place}</h3>
+        <p>Mag: ${eq[0].properties.mag}</p>
+        <p>Alert: ${eq[0].properties.alert}</p>
+        <p>Status: ${eq[0].properties.status}</p>
+        <p>Tsunami: ${eq[0].properties.tsunami}</p>
+        <p>Type: ${eq[0].properties.type}</p>
+    `;
+
+    chartInfo.innerHTML = `
+        <h3 class="subtitle mt-5">Chart Info</h3>
+        <p>Significance: ${eq[0].properties.sig}</p>
+        <p>Number of Stations: ${eq[0].properties.nst}</p>
+        <p>Gap: ${eq[0].properties.gap}</p>
+    `;
+    colors.innerHTML = `
+        <div class="colors">
+            <div class="color">
+                <div class="color-box" style="background-color: #C4C6F1;"></div>
+                <p>Significance</p>
+            </div>
+            <div class="color">
+                <div class="color-box" style="background-color: #CDF1C4;"></div>
+                <p>Number of Stations</p>
+            </div>
+            <div class="color">
+                <div class="color-box" style="background-color: #F1D4C4;"></div>
+                <p>Gap</p>
+            </div>
+        </div>
+    `;
+
 
 
     return eq;

@@ -134,3 +134,121 @@ a {
 #loader {
     color: black;
 }
+
+#place-info *,
+#chart-info *,
+#colors * {
+    color: black;
+}
+
+.color-box {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    top: 2px;
+    margin-right: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col-md-4 {
+    width: 33.33333333%;
+    flex: 0 0 auto;
+}
+
+.col-md-8 {
+    width: 66.66666667%;
+    flex: 0 0 auto;
+}
+
+.color {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+}
+
+.relative {
+    position: relative;
+}
+
+div#colors {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 1200px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col-md-4 {
+        width: 100%;
+        flex: 0 0 auto;
+    }
+
+    .col-md-8 {
+        width: 100%;
+        flex: 0 0 auto;
+    }
+
+    .container {
+        max-width: 85%;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 95%;
+    }
+
+    #defaultCanvas0 {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 20px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div#colors {
+        position: unset;
+        bottom: 0;
+        right: 0;
+    }
+
+    .card-body {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .col-md-8.relative {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+
+    #defaultCanvas0 {
+        transform: scale(1.5);
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+}
